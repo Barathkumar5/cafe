@@ -1,0 +1,31 @@
+.wholesignin{
+  padding-top: 25px;
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-bottom: 500px;
+  background-image: url(/assests/images/adam-wilson-7Od26RsZ2Rk-unsplash.jpg);
+  background-size: 2000px 1000px;
+  font-size: 30px;
+}
+.titlesignin{
+  font-family: cursive;
+  padding-left: 750px;
+  padding-top: 300px;
+  margin-top: 160px;
+  color: aqua;
+  width: 400px;
+  font-size: 100px;
+}
+.signinform{
+  font-size: 35px;
+  padding-left: 30px;
+  margin-top: -400px;
+  color: aquamarine;
+}
+.inform{
+  font-size: 30px;
+}
+.dummysignin{
+  margin-left: 800px;
+  margin-bottom: -100px;
+}

@@ -1,0 +1,15 @@
+{{outlet}}
+<main class="wholemenu">
+  <tr class="columnname">
+    <th class="column1">Items </th>
+    <th class="column2">Quantity </th>
+    <th class="column2">Price</th>
+  </tr>
+  {{#each model as |cartItem|}}
+  <tr class="list">
+    <td class='itemname'>{{cartItem.menuName}} </td>
+    <td class='cartitemquantity'> {{cartItem.quantity}} </td>
+    <td class='cartitemprice'>{{cartItem.cart.id }}</td>
+  </tr>
+  {{/each}}
+</main>

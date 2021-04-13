@@ -1,0 +1,26 @@
+<main class='wholeadmin'>
+  <form {{action 'createMenuItem' on="submit" }}>
+    <p>name:</p>
+    {{input type="text" value=name placeholder="enter the item name"}}
+    <p>price:</p>
+    {{input type="number" value=price placeholder="enter the item price"}}
+    <p>description:</p>
+    {{input type="string" value=description placeholder="something about the item"}}
+    <p><button type="submit">Add the item to the list</button></p>
+  </form>
+  <h2>{{#link-to 'index'}}<button class='BTN3' type="button">
+      Home</button>{{/link-to}}</h2>
+  <div class="adminmenu">
+    <tr class="admincolumnname">
+      <th class="admincolumn1">Menu </th>
+      <th class="admincolumn2">Price </th>
+    </tr>
+    {{#each model.menu_items as |menu_item|}}
+    <tr>
+      <td class='adminitemname'>{{menu_item.name}}</td>
+      <td class='adminitemprice'>{{menu_item.price}}</td>
+      <td><button class="deletemenu" type="submit" {{action 'deleteMenuItem' menu_item.id}}>Delete</button></td>
+    </tr>
+    {{/each}}
+  </div>
+</main>

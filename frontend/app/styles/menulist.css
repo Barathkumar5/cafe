@@ -1,0 +1,62 @@
+.cartsymbol{
+  margin-left: 600px;
+  width: 60px;
+  background-color: white;
+  border-radius: 20px;
+}
+.wholemenu{
+  padding-top: 25px;
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-bottom: 300px;
+  font-size: 30px;
+  background-image: url(/assests/images/bernard-hermant-MzaqlZ0qnIw-unsplash.jpg);
+  background-size: 2000px 1000px;
+  color: whitesmoke;
+}
+.darkplate{
+  background-color:black;
+  width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.columnname{
+  display: flex;
+  font-size: 35px;
+  padding-bottom: 20px;
+  color: blanchedalmond;
+}
+.addmenu{
+  background-color: lightblue;
+  margin-left: 60px;
+  font-size: 19px;
+  border-radius: 20px;
+}
+
+.column1{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 45px;
+}
+.column2{
+  padding-left: 70px;
+  margin-left: 120px;
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.itemname{
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.itemprice{
+  padding: 10px;
+  padding-left: 90px;
+  flex-direction: column;
+  display: flex;
+  font-size: 35px;
+
+}
+.list{
+  background: linear-gradient(to top, #2193b0, #6dd5ed);
+}

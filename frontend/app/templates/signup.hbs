@@ -1,0 +1,18 @@
+<main class="signup">
+  <div class='dummysignup'>
+    <h1 class='signuptitle'>Create your own account</h1>
+    <form {{action 'createUser' on="submit" }}>
+      <p class='label'>First name:</p>
+      {{input type="text" value=firstname class='inputbox'}}
+      <p class='label'>Last name:</p>
+      {{input type="text" value=lastname class='inputbox'}}
+      <p class='label'>Email:</p>
+      {{input type="text" value=email class='inputbox'}}
+      <p class='label'>Phone:</p>
+      {{input type="number" value=phone class='inputbox'}}
+      <p class='label'>Residential address:</p>
+      {{input type="text" value=residentialaddress class='inputbox'}}
+      <p><button type="submit" class='signupbutton'>SignUp</button></p>
+    </form>
+  </div>
+</main>

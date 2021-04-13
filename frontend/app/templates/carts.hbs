@@ -1,0 +1,38 @@
+{{outlet}}
+<main class='wholecart'>
+  <div class='viewmenu'>{{#link-to 'menu_items'}}View menu
+    {{/link-to}}</div>
+  <div class='dummycart'>
+    <tr class="cartcolumnname">
+      <th class="cartcolumn1">Items </th>
+      <th class="cartcolumn2">Quantity </th>
+      <th class="cartcolumn2">Price </th>
+    </tr>
+    <tr>
+      <td class='cartitemname'>
+        {{#each model.cartItems as |cartItem|}}
+    <tr class='cartitemrows'> {{cartItem.menuName}} </tr>
+    {{/each}}
+    </td>
+    <td class='cartitemquantity'>
+      {{#each model.cartItems as |cartItem|}}
+      <tr> {{cartItem.quantity}} </tr>
+      {{/each}}
+    </td>
+    <td class='cartitemprice'>
+      {{#each model.cartItems as |cartItem|}}
+      <tr> {{cartItem.menuPrice}} </tr>
+      {{/each}}
+    </td>
+    <td class='cartitemprice'>
+      {{#each model.cartItems as |cartItem|}}
+      <tr><button type="submit" class='remove' {{action 'deleteCartItem' cartItem.id }}><img
+            src="/assests/images/delete.png"></button>
+      </tr>
+      {{/each}}
+    </td>
+    </tr>
+    <div class='totalbill'>Total Bill: {{model.totalPrice}}</div>
+  </div>
+  <div><button class='checkout' {{action 'statusUpdate' model.id}}type='submit'>Checkout</button></div>
+</main>
