@@ -1,0 +1,13 @@
+<main class='wholesignin'>
+  <div class='dummysignin'> {{#link-to 'signup' }}<button class='BTN' type="button">
+      Signup</button>
+    {{/link-to}}</div>
+  <h1 class='titlesignin'>Signin Page</h1>
+  <div class='signinform'>
+    <form {{action 'new_session' on="submit" }}>
+      <p>Email:</p>
+      {{input type="text" class='inform' value=email}}
+      <p class='dummy1'><button class='BTN' type="submit">SignIn</button></p>
+    </form>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+.signup{
+  font-size: 30px;
+  padding-bottom: 200px;
+  background-image: url(/assests/images/henry-co--odUkx8C2gg-unsplash.jpg);
+  background-size: 1100px 1500px -1000px;
+  margin-top: -50px;
+}
+.dummysignup{
+  padding-left: 200px;
+}
+.signuptitle{
+  font-family: monospace;
+  color: darkred;
+}
+.label{
+  font-family: fantasy;
+  font-size: 30px;
+  color: rgb(10, 10, 10);
+}
+.inputbox{
+  padding-top: 10px;
+  border-radius: 28px;
+  -moz-border-radius: 28px;
+  background-color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+.signupbutton{
+  border-radius: 30px;
+  font-size: 25px;
+  font-family: sans-serif;
+  margin-left: 100px;
+  margin-top: 20px;
+}

@@ -1,0 +1,55 @@
+.adminmenu{
+  padding-top: 25px;
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-bottom: 300px;
+  font-size: 30px;
+}
+.admincolumnname{
+  display: flex;
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.deletemenu{
+  background-color: lightblue;
+  margin-left: 60px;
+  font-size: 19px;
+  border-radius: 20px;
+}
+
+.admincolumn1{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 45px;
+}
+.admincolumn2{
+  padding-left: 70px;
+  margin-left: 110px;
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.adminitemname{
+  padding: 10px;
+  padding-bottom: 15px;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.adminitemprice{
+  padding: 10px;
+  padding-left: 90px;
+  flex-direction: column;
+  display: flex;
+  font-size: 35px;
+}
+.BTN3{
+	background-color: #6dc77a;
+	border-radius: 28px;
+	-moz-border-radius: 28px;
+	-webkit-border-radius: 28px;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 10px 26px;
+	margin-top: 20px;
+	margin-left: 1000px;
+	font-size: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

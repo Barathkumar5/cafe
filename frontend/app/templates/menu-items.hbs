@@ -1,0 +1,21 @@
+<main class="wholemenu">
+  <h2>{{#link-to 'index'}}<button class='BTN3' type="button">
+      Home</button>{{/link-to}}</h2>
+  <h4>{{#link-to 'carts' }}
+    <img class='cartsymbol' src="/assests/images/cart (1).png">
+    {{/link-to}}
+  </h4>
+  <div class='darkplate'>
+    <tr class="columnname">
+      <th class="column1">Menu </th>
+      <th class="column2">Price </th>
+    </tr>
+    {{#each model.menu_items as |menu_item|}}
+    <tr class="list">
+      <td class='itemname'>{{menu_item.name}}</td>
+      <td class='itemprice'>{{menu_item.price}}</td>
+      <td><button class="addmenu" type="submit" {{action 'createCartItem' menu_item.id}}>add</button></td>
+    </tr>
+    {{/each}}
+  </div>
+</main>
