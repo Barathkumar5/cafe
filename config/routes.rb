@@ -1,6 +1,9 @@
 CafeteriaManagementApp::Application.routes.draw do
-  get "signin" , to: "sigin#index"
-  resources :customers
+  #get "/signins", to: "sessions#new"
+  post "/signins" => "sessions#create", :as => "signin"
+  delete "/signins" => "sessions#destroy"
+  resources :carts, :users, :cart_items
+  resources :menu_items, :menu_categories
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

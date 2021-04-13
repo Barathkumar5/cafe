@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :phone
       t.text :residential_address
 
+
+
       t.timestamps
     end
   end

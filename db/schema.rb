@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20210318115602) do
+ActiveRecord::Schema.define(:version => 20210408095215) do
+
+  create_table "cart_items", :force => true do |t|
+    t.integer  "menu_item_id"
+    t.integer  "quantity"
+    t.integer  "cart_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "carts", :force => true do |t|
+    t.string   "status"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.integer  "total_price"
+    t.integer  "user_id",     :limit => 8
+  end
 
   create_table "menu_categories", :force => true do |t|
     t.string   "category"
@@ -23,18 +39,20 @@ ActiveRecord::Schema.define(:version => 20210318115602) do
     t.string   "name"
     t.integer  "price"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "menu_category_id", :limit => 8
   end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "phone"
     t.text     "residential_address"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.string   "password_digest"
+    t.integer  "phone",               :limit => 8
   end
 
 end

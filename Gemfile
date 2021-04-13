@@ -6,7 +6,7 @@ gem 'rails', '3.2.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-
+gem 'test-unit', '3.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,10 +21,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'ember-cli-rails'
+gem "active_model_serializers", "~> 0.8.0"
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -39,3 +39,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem "mysql2", "= 0.3.19"
+
+gem "devise", "~> 2.2"
+gem "bcrypt-ruby"
+gem "byebug"

@@ -8,6 +8,7 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
+require "active_model_serializers"
 
 module CafeteriaManagementApp
   class Application < Rails::Application
