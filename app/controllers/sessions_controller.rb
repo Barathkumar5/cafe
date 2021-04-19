@@ -1,16 +1,15 @@
 class SessionsController < ApplicationController
+  skip_before_filter :set_current_user
   def create
-    email=params[:signin][:email]
+    email=params[:email]
     user=User.find_by_email(email)
     if user.nil?
-      render json: user
+      render text: 'invalid_grant', status: 400
     else
-      session[:user_id]=user.id
-      render json: user
+      render json: {access_token: user.email}
     end
   end
   def destroy
-     session[:user_id]=nil
-     flash.now.alert = "Logged Out"
+     @current_user=nil
   end
 end

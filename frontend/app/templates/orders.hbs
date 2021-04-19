@@ -1,0 +1,21 @@
+{{outlet}}
+<main class='wholecart'>
+  <div class='dummycart'>
+    <tr>
+      <th class="cartcolumn1">Order-Id</th>
+      <th class="bill">Bill Amount</th>
+      <th class="cartcolumn3">Status</th>
+    </tr>
+    <tr>
+      {{#each model as |order|}}
+      {{#if order.totalPrice}}
+      <td class='cartitemname'>{{order.id}}</td>
+      <td class='cartitemquantity'>{{order.totalPrice}}</td>
+      <td class='cartitemprice'>{{order.status}}</td>
+      {{/if}}
+      {{/each}}
+    </tr>
+  </div>
+  <div> {{#link-to 'menu_items'}}View menu
+    {{/link-to}}</div>
+</main>

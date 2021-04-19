@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
   #protect_from_forgery
-  helper_method :current_user
-
+  before_filter :set_current_user
   private
-
-  def current_user
-    if session[:user_id]
-       #puts(session[:user_id])
-       @current_user= User.find(session[:user_id])
+  def set_current_user
+    #byebug
+    if request.headers['authorization']=='null'
+      render text: '401', status: 401
+    else
+      @current_user = User.find_by_email(request.headers['authorization'])
     end
   end
 end

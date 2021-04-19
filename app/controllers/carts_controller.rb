@@ -2,7 +2,7 @@ class CartsController < ApplicationController
   def create
     id=current_user.id
     new_cart=Cart.create!(user_id: id, status: null, total_price: 0 )
-    render json: current_user
+    render json: new_cart
   end
   def update
     id=params[:id]
@@ -18,13 +18,25 @@ class CartsController < ApplicationController
     render text: "cart with id:#{id} is deleted"
   end
   def index
-    user_id=params[:user_id]
-    items=Cart.where('user_id' => user_id)
-    render json: items
+    token=request.headers['authorization']
+    if token=='null'
+      render text: 'unauthorized', status: 401
+    else
+    user=User.find_by_email(token)
+    item=Cart.find_by_user_id(user.id)
+    render json: item
+    end
   end
   def show
     id=params[:id]
-    cart=Cart.find(id)
-    render json: cart
+    token=request.headers['authorization']
+    if token=='null'
+    render text: 'unauthorized', status: 401
+    else
+      current_user=User.find_by_email(token)
+      user_id=current_user.id
+      cart=Cart.find_by_user_id(user_id)
+      render json: cart
+    end
   end
 end

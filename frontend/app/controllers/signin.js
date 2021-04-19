@@ -1,8 +1,8 @@
 import Ember from 'ember';
-import { UnauthorizedError } from 'ember-ajax/errors';
 
 
 export default Ember.Controller.extend({
+  authManager: Ember.inject.service(),
   actions: {
     checkUser: function () {
       var email = this.get('email');
@@ -21,21 +21,14 @@ export default Ember.Controller.extend({
     new_session: function () {
       var email = this.get('email');
       var this1 = this;
-      let user = this.store.queryRecord('user', { email: email }).then(function (users) {
-        if (users) {
-          let new_user = this1.store.createRecord('signin', { email: email });
-          new_user.save();
-          this1.transitionToRoute('menu_items');
-        }
-        else {
-          console.log("hello");
-          alert("Invalid credentials! check your email or if you are a new user signup first");
-        }
-      }).catch(function (error) {
-        if (error instanceof UnauthorizedError) {
-          alert("Invalid credentials!");
-        }
+      let user = this1.get('authManager').authenticate(email).then(() => {
+        alert("success");
+        this1.transitionToRoute('menu_items');
+      }, (err) => {
+        alert('Error obtaining token: ' + err.responseText);
       });
-    }
+    }/*.catch(function (err) {
+        alert('Error obtaining token: ' + err.code);
+      });*/
   }
 });

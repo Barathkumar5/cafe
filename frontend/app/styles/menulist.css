@@ -1,8 +1,14 @@
 .cartsymbol{
-  margin-left: 600px;
+  margin-left: 478px;
+  background-color: #6dc77a;
   width: 60px;
-  background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.cartsymbol:hover{
+  margin-left: 478px;
+  width: 60px;
+  border-radius: 25px;
 }
 .wholemenu{
   padding-top: 25px;
@@ -10,7 +16,8 @@
   padding-right: 500px;
   padding-bottom: 300px;
   font-size: 30px;
-  background-image: url(/assests/images/bernard-hermant-MzaqlZ0qnIw-unsplash.jpg);
+  margin-top: -40px;
+  background-color: whitesmoke;
   background-size: 2000px 1000px;
   color: whitesmoke;
 }
@@ -19,6 +26,7 @@
   width: 500px;
   padding: 20px;
   border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .columnname{
   display: flex;
@@ -29,10 +37,9 @@
 .addmenu{
   background-color: lightblue;
   margin-left: 60px;
-  font-size: 19px;
+  font-size: 23px;
   border-radius: 20px;
 }
-
 .column1{
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    font-size: 45px;
@@ -57,6 +64,19 @@
   font-size: 35px;
 
 }
-.list{
-  background: linear-gradient(to top, #2193b0, #6dd5ed);
+
+.orderlink{
+   margin-left: 600px;
+   position: absolute;
+   background-color: lightskyblue;
+   border-radius: 10px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.BTN7{
+  background-color: #6dc77a;
+  border-radius: 20px;
+  position: absolute;
+  text-decoration: none;
+	font-size: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }

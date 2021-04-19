@@ -1,6 +1,6 @@
 <main class="wholemenu">
-  <h2>{{#link-to 'index'}}<button class='BTN3' type="button">
-      Home</button>{{/link-to}}</h2>
+  <h2><button class="BTN7" type="submit" {{action 'signOut' }}> <img src="/assests/images/power-standby.png"> </button>
+  </h2>
   <h4>{{#link-to 'carts' }}
     <img class='cartsymbol' src="/assests/images/cart (1).png">
     {{/link-to}}
@@ -18,4 +18,8 @@
     </tr>
     {{/each}}
   </div>
+  <h4 class='orderlink'>{{#link-to 'orders' }}
+    View orders
+    {{/link-to}}
+  </h4>
 </main>

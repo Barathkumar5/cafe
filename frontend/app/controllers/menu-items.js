@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  authManager: Ember.inject.service(),
   actions: {
     createCartItem: function (params) {
       var id = params;
@@ -12,6 +13,11 @@ export default Ember.Controller.extend({
       }
       );
       cart_item.save();
+    },
+    signOut: function () {
+      this.get('authManager').invalidate();
+      this.transitionToRoute('index');
+      alert("successfully Logged out");
     }
   }
 }

@@ -1,9 +1,24 @@
-.adminmenu{
-  padding-top: 25px;
-  padding-left: 500px;
-  padding-right: 500px;
-  padding-bottom: 300px;
+.wholeadmin{
+  padding-left: 200px;
+  padding-right: 700px;
+  padding-bottom: 1000px;
+  padding-top:60px;
   font-size: 30px;
+  background-color: whitesmoke;
+}
+.adminmenu{
+  background: rgb(241, 63, 63);
+  font-size: 30px;
+  border-radius: 20px;
+  margin-left: 350px;
+  margin-bottom: 1200px;
+  padding: 10px 5px 5px 10px;
+  position: absolute;
+}
+.menuadmin{
+  width: 200px;
+  margin-top: 100px;
+  position: absolute;
 }
 .admincolumnname{
   display: flex;
@@ -48,8 +63,22 @@
 	text-decoration: none;
 	color: #ffffff;
 	padding: 10px 26px;
-	margin-top: 20px;
 	margin-left: 1000px;
 	font-size: 30px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.i{
+  font-size: 20px;
+}
+.hovbutton:hover{
+  font-size: 19px;
+  background-color: #bee081;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px black;
+}
+.hovbutton{
+  box-shadow: 2px 2px 3px black;
+  font-size: 20px;
+  background-color: #bee081;
+  border-radius: 10px;
 }

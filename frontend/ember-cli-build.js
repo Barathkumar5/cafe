@@ -2,11 +2,11 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
-
+  app.import('bower_components/js-cookie/src/js.cookie');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

@@ -1,4 +1,5 @@
 class MenuItemsController < ApplicationController
+  skip_before_filter :set_current_user
   def create
     name_ = params[:menu_item][:name]
     price_ = params[:menu_item][:price]

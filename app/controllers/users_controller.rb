@@ -11,7 +11,7 @@ class UsersController < ApplicationController
           residential_address: params[:user][:residential_address]
            )
       new_user.save
-      new_cart= Cart.new(user_id: new_user.id)
+      new_cart= Cart.new(user_id: new_user.id, status: "Nil", total_price: "Nil")
       new_cart.save
       render json: new_user
     else
@@ -22,12 +22,12 @@ class UsersController < ApplicationController
     id_=params[:id]
     user=User.find(id_)
     user.delete
-    render text: "The user account with user_id: #{id_} was deleted"
+    render json: user
   end
   def show
     id=params[:id]
     user=User.find(id)
-    render json: user
+    render json: id
   end
   def index
     email=params[:email]

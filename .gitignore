@@ -13,3 +13,10 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/frontend/vendor
+/frontend/tmp
+/frontend/node_modules
+/frontend/bower_components
+/frontend/package.json
+/frontend/bower.json
+/frontend/dist

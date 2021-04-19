@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('cart_items');
   this.route('admin_menu');
   this.route('carts');
+  this.route('orders');
 });
 
 export default Router;
